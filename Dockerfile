@@ -5,4 +5,4 @@ COPY ./src /docker-practice-on-carina-demo/src
 COPY ./pom.xml /docker-practice-on-carina-demo/pom.xml
 ENV SUITE=api
 
-ENTRYPOINT ["mvn", "clean", "test", "-Dsuite=${SUITE}"]
+ENTRYPOINT ["mvn", "test", "-Dsuite=${SUITE}"]

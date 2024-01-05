@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  mvn-dc:
+    build: .
+    volumes:
+      - './target/:/docker-practice-on-carina-demo/target'
+      - './reports/:/docker-practice-on-carina-demo/reports'
+    environment:
+      - "SUITE=api"
