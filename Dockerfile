@@ -3,6 +3,7 @@ RUN apt-get update && apt-get install -y maven
 WORKDIR /docker-practice-on-carina-demo
 COPY ./src /docker-practice-on-carina-demo/src
 COPY ./pom.xml /docker-practice-on-carina-demo/pom.xml
-ENV SUITE=api
-
+ENV SUITE=web
 ENTRYPOINT ["mvn", "test", "-Dsuite=${SUITE}"]
+#ENV SUITE=api
+#ENTRYPOINT ["mvn", "test", "-Dsuite=${SUITE}"]
